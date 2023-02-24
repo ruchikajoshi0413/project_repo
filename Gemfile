@@ -76,3 +76,4 @@ gem 'activeadmin'
 
 gem 'devise'
 gem 'sassc'
+gem 'rolify'

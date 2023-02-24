@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
+# <p style="color: green"><%= notice %></p>
 
-<h1>Articles</h1>
+# <h1>Articles</h1>
 
-<div id="articles">
-  <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
-  <% end %>
-</div>
+# <div id="articles">
+#   <% @articles.each do |article| %>
+#     <%= render article %>
+#     <p>
+#       <%= link_to "Show this article", article %>
+#     </p>
+#   <% end %>
+# </div>
+# <%= link_to "New article", new_article_path %>
 
-<%= link_to "New article", new_article_path %>
+<% @article.each do |article| %>
+  <%= article.email %>
+  <%= article.roles.pluck(:name) %>
+  <%= link_to 'edit_role', edit_article_path(article) %>
+  </br>
+<% end %>

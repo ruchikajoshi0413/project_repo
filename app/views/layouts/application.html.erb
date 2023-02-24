@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <% if article_signed_in? %>
+    Are you admin? <%= current_article.has_role? :admin %>
+    <%= current_article.roles %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
